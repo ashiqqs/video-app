@@ -1,0 +1,12 @@
+<h6 class="text-light px-4">Search result for basket ball</h6>
+<div class="px-3">
+    <div *ngFor="let video of sharedService.videoSearchResult$|async" (click)="watch(video)" [routerLink]="'/watch'" 
+    class="card video-card border-0">
+        <div class="card-body p-0">
+            <img [src]="video.preview_image" width="254px"/>
+        </div>
+        <div class="card-footer py-2">
+            <p class="mb-0"><strong>{{video.name|slice:0:30}}{{video.name?.length>30?'...':''}}</strong></p>
+        </div>
+    </div>
+</div>

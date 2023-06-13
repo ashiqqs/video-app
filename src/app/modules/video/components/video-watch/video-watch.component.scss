@@ -1,0 +1,42 @@
+.video {
+    width: 100%;
+    iframe {
+        height: 600px;
+        width: 100%;
+    }
+}
+
+.video-running-detail {
+    margin: 10px 0px;
+    p {
+        font-size: 12px;
+    }
+}
+.video-suggetion {
+    height: 60px;
+    background: #2b2f32;
+    border: 0;
+    margin: 2px 0px;
+    cursor: pointer;
+
+    .thumble, .video-detail {
+        float: left;
+    }
+
+    .thumble {
+        height: 60px;
+        width: 60px;
+        float: left;
+        img {
+            object-fit: contain;
+            width: 60px;
+        }
+    }
+
+    .video-detail {
+        padding: 0px 05x;
+        p {
+            font-size: 12px;
+        }
+    }
+}

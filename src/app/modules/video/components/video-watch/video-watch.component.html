@@ -1,0 +1,24 @@
+<div class="row text-light mx-0">
+    <div class="col-md-8" *ngIf="video">
+        <div class="video">
+            <iframe *ngIf="video.url" width="560" height="315" [src]="getSanitizeUrl(video.url)" frameborder="0"
+                allowfullscreen></iframe>
+        </div>
+        <div class="video-running-detail">
+            <h5>{{video.name}}</h5>
+            <p class="mb-0">{{video.description}}</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <h6>Suggested videos</h6>
+        <div *ngFor="let video of suggestedVideos|slice:0:10" (click)="watch(video)" class="row video-suggetion">
+            <div class="thumble">
+                <img [src]="video.preview_image"/>
+            </div>
+            <div class="video-detail text-light col px-3">
+                <h6>{{video.name|slice:0:30}}{{video.name?.length>30?'...':''}}</h6>
+                <p class="mb-0">{{video.description|slice:0:50}}{{video.description?.length>50?'...':''}}</p>
+            </div>
+        </div>
+    </div>
+</div>

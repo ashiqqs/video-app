@@ -1,0 +1,12 @@
+.body {
+    height: calc(100% - 60px);
+    display: block;
+}
+
+.header {
+    height: 60px;
+}
+
+.router-outlet {
+    height: 0px;
+}

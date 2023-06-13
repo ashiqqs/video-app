@@ -1,0 +1,12 @@
+.video-card {
+    height: 250px;
+    width: 250px;
+    margin: 10px;
+    float: left;
+    cursor: pointer;
+
+    img {
+        object-fit: contain;
+        width: 250px;
+    }
+}

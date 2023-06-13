@@ -1,0 +1,22 @@
+<div class="row px-3 py-2 bg-secondary text-light mx-0 header">
+  <div class="col-sm-3">
+    <h4 routerLink="" style="cursor: pointer">Video App</h4>
+  </div>
+  <div class="col-sm-6">
+    <div class="form-group row">
+      <div class="input-group">
+        <input type="text" (keyup.enter)="search()" [(ngModel)]="query" name="query" class="form-control" placeholder="Search"/>
+        <div class="input-group-append">
+          <button (click)="search()" class="btn btn-primary rounded-0">
+            <span class="fa fa-search"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3"></div>
+</div>
+
+<div class="row body mx-0">
+  <router-outlet></router-outlet>
+</div>
